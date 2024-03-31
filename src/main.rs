@@ -11,8 +11,8 @@ async fn main() {
 }
 
 fn ping_pong() -> Router {
-    async fn hello() -> &'static str {
+    async fn pong() -> &'static str {
         "pong"
     }
-    Router::new().route("/ping", get(hello))
+    Router::new().route("/ping", get(pong))
 }
