@@ -1,0 +1,16 @@
+@host= http://localhost:3000
+
+# Create a person
+POST {{host}}/person
+Content-Type: application/json
+
+{
+    "name": "Foo bar",
+    "age": 19,
+    "email": "foo.bar@email.com"
+}
+
+###
+# Get all persons
+GET {{host}}/person
+Content-Type: application/json
